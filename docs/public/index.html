@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b101b">
+  <meta name="description" content="A game of Spy with Dota 2 heroes and items.">
+  <title>DOTA SPY</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="DOTA SPY — home"><img src="assets/mark.svg" alt=""><span>DOTA<span class="brand-light">SPY</span></span></a>
+      <nav aria-label="Main navigation">
+        <button class="nav-item active" data-nav="play"><span class="nav-icon">◈</span> Play</button>
+        <button class="nav-item" data-nav="heroes"><span class="nav-icon">▦</span> All heroes <span id="nav-count" class="mini-count">…</span></button>
+        <button class="nav-item" data-nav="items"><span class="nav-icon">◇</span> All items <span id="nav-items-count" class="mini-count">…</span></button>
+      </nav>
+      <div class="sidebar-banners">
+        <div class="sidebar-banner"><img src="assets/drop-musor.gif" alt="Musor Drop" width="220" height="117"></div>
+        <div class="sidebar-banner"><img src="assets/sidebar-extra.gif" alt="Animated notebook" width="480" height="480"></div>
+        <div class="sidebar-banner"><img src="assets/cs2-dance.gif" alt="CS2 dance" width="220" height="220"></div>
+      </div>
+    </aside>
+    <main>
+      <header class="topbar"><span id="page-label">Lobby</span></header>
+      <div class="main-inner">
+        <section id="play-page">
+          <div class="game-layout"><section class="panel main-panel" id="game-panel" aria-label="Game"><div class="loading">Loading…</div></section><aside id="side-panel"><div id="side-content"></div><section id="gameplay-video-panel" class="panel gameplay-video-panel" hidden><video id="gameplay-video" data-src="assets/videos/parkour.mp4" muted autoplay loop playsinline controls preload="metadata" aria-label="Minecraft parkour gameplay">Your browser does not support video playback.</video></section></aside></div>
+          <div id="reaction-controls"></div>
+        </section>
+        <section id="heroes-page" hidden><div class="catalog-tools"><label class="search"><span>⌕</span><input id="hero-search" type="search" placeholder="Search heroes…" aria-label="Search heroes"></label><span id="filtered-count"></span></div><div id="hero-grid" class="hero-grid"></div></section>
+      </div>
+    </main>
+  </div>
+  <dialog id="modal"><div id="modal-content"></div><button class="dialog-close" id="modal-close" aria-label="Close">×</button></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
