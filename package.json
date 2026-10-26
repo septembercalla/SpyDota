@@ -1,0 +1,23 @@
+{
+  "name": "dota-spy",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A local game of Spy with Dota 2 heroes and items",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "test": "node --test",
+    "build:carousel": "node scripts/build-carousel.mjs",
+    "update:heroes": "node scripts/update-heroes.mjs",
+    "update:items": "node scripts/update-items.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  }
+}
